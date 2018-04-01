@@ -1,4 +1,5 @@
 // pages/history/history.js
+const app = getApp();
 Page({
 
   /**
@@ -8,14 +9,13 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    textArray: [{ route: 'ORD-香槟', date: '12/18/2017', time: '1 AM', car: 'BMW X5',               status:'进行中'} ],
-    histryArray:[
-      { route: '香槟-ORD', date: '12/18/2017', time: '1 AM', car: 'BMW X5', status: '已完成' },
-      { route: 'ORD-香槟', date: '12/18/2017', time: '1 AM', car: 'BMW X5',status: '已完成' },
-      { route: '香槟-普渡', date: '12/18/2017', time: '1 AM', car: 'BMW X5', status: '已完成' },
-      { route: '普渡-香槟', date: '12/18/2017', time: '1 AM', car: 'BMW X5', status: '已完成' },
+    textArray: [{ route: 'ORD-香槟', driver: '老司机', date: '12/18/2017', time: '1 AM', car: 'BMW X5', status: '进行中' }],
+    histryArray: [
+      { route: '香槟-ORD', driver: '老司机', date: '12/18/2017', time: '1 AM', car: 'BMW X5', status: '已完成' },
+      { route: 'ORD-香槟', driver: '老司机', date: '12/18/2017', time: '1 AM', car: 'BMW X5', status: '已完成' },
+      { route: '香槟-普渡', driver: '老司机', date: '12/18/2017', time: '1 AM', car: 'BMW X5', status: '已完成' },
+      { route: '普渡-香槟', driver: '老司机', date: '12/18/2017', time: '1 AM', car: 'BMW X5', status: '已完成' },
     ],
-
   },
 
   /**

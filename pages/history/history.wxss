@@ -4,7 +4,8 @@
   
   width: 700rpx;
   height: 300rpx;
-  margin-top: 30rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
   align-items: left;
   border-radius: 3px;
   box-shadow: 0rpx -1rpx 3rpx 0rpx #EAEAEA inset;
@@ -21,9 +22,9 @@
 .routeInfo{
   display:flex;
   flex-direction: row;
-  margin-top: 20rpx;
+  margin-top: 10rpx;
   border-bottom:1px solid grey;
-  padding: 20rpx;
+  padding: 30rpx;
 }
 .listText {
   margin-left: 35rpx;
@@ -47,8 +48,8 @@
   width:100rpx;
   height:60rpx;
   margin-left: 300rpx;
-  margin-top: 20rpx;
-  background-color:#32CD32;
+  margin-top: 10rpx;
+  background-color:#B3EA7B;
   font-size: 23rpx;
   border-radius: 3px;
 }
@@ -58,7 +59,7 @@
   height:60rpx;
   margin-left: 300rpx;
   margin-top: 20rpx;
-  background-color:#A52A2A;
+  background-color:#B36B74;
   font-size: 23rpx;
   border-radius: 3px;
 }
