@@ -1,0 +1,35 @@
+
+<view class="container ride-info-view" id="header">
+  <text class="route">{{title}}</text>
+  <text class="time">{{date}}</text>
+  <text class="time">{{time}}</text>
+</view>
+
+<view class="rider-info-view">
+  <image class="avatar" src="http://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg" bindtap="toDriverView"></image>
+  <view class="rider-info-area">
+    <text id="ridername">username</text>
+    <text id="recognition">老司机认证</text>
+  </view>
+  
+  <view class="rider-score-area">
+    <text id="score">5.0/4.9分</text>
+  </view>
+</view>
+<view class="seats-area">
+  <view class='seats-row' wx:for='{{textArray}}' wx:for-item='item_row' wx:for-index='idx_row' wx:key='{{idx_row}}'>
+     <view class='seat'id='{{idx_row}}{{idx_col}}' bindtap="addSeat" wx:for='{{item_row}}' wx:for-item='item_col' wx:for-index='idx_col' wx:key='{{idx_col}}' style='background-image:url({{item_col.img}});background-size:contain'> 
+      <i class="fa fa-times del-icon" aria-hidden="true" id='del{{idx_row}}{{idx_col}}'catchtap="deleteSeat" style='display:{{item_col.del_display}}'></i>
+      <text class='plus-sign'>+</text>
+    </view>
+  </view>
+</view>
+<view class='comment-area'>
+  <text class='comment'>司机备注：</text>
+  <text class='comment'>我车速巨快，一个小时能到芝加哥，不怕就来</text>
+</view>
+<button class="end-ride" bindtap='endRideAction'>
+  <text>结束顺风车</text>
+</button>
+
+
