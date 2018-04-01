@@ -132,10 +132,18 @@ Page({
 
   },
 
+  
+
   create:function(e){
     console.log('创建房间' + this.data.selectSeatNumber + this.data.selectDate + this.data.selectTime);
+    let title = e.currentTarget.dataset.title
+    let date = e.currentTarget.dataset.date
+    let time = e.currentTarget.dataset.time
+    let car = e.currentTarget.dataset.car
     wx.navigateTo({
-      url: '../detail/detail',
+      url: '../detail/detail?title=' + title + "&date="
+      + date + "&time=" + time + "&car=" + car
     })
+    
   }
 })

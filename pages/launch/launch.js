@@ -10,7 +10,7 @@ Page({
     hasUserInfo: false,
     buttonArray: [{ "role": "我是乘客", "icon": "/images/man.png", "tap":"passengerTap"},
                   { "role": "我要开车", "icon": "/images/car.png", "tap": "driverTap"},
-                  { "role": "进行中/已完成", "icon": "/images/car.png", "tap": "historyTap" }]
+                  { "role": "进行中/已完成", "icon": "/images/history.png", "tap": "historyTap" }]
   },
 
   /**

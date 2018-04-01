@@ -65,9 +65,10 @@
   margin: 40rpx;
   color: grey; 
    text-align: center; 
-  border-width: 2px;
+  border-width: 2rpx;
   border-color: grey;
   border-style: solid;
+  border-radius: 5rpx;
   justify-content: center;
   align-items: center; 
   /* background-image: url('http://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg');  */
