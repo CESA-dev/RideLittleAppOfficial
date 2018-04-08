@@ -86,7 +86,7 @@
   font-size: 25rpx;
   font-weight: 150;
   color: #888888;
-  align-items: left;
+  text-align: left;
   margin-left: 30rpx;
   margin-top: 40rpx;  
   line-height: 1.6;
