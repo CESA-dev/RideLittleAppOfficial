@@ -62,9 +62,9 @@ Page({
     });
   },
   endRideAction: function(e){
-    /*wx.navigateTo({
-      url: 'rating page',
-    })*/
+    wx.navigateTo({
+      url: '../rating/rating'
+    })
     console.log("end ride");
   },
 

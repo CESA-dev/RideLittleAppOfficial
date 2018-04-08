@@ -8,7 +8,8 @@
     "pages/history/history",
     "pages/newRide/newRide",
     "pages/search/search",
-    "pages/driver/driver"
+    "pages/driver/driver",
+    "pages/rating/rating"
 
   ],
 
