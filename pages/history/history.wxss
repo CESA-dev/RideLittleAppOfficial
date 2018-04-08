@@ -68,8 +68,8 @@
 .driverInfo{
   display:flex;
   flex-direction: row;
-  /* margin-top: 10rpx; */
-  /* padding-bottom: 10rpx; */
+   margin-top: 10rpx; 
+   padding-bottom: 10rpx; 
 }
 
 .avatar {
@@ -77,16 +77,17 @@
   height: 100rpx;
   align-items: left;
   border-radius: 50%;
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   margin-left: 30rpx;
   }
 
 .carModel{
-  height:30rpx;
+  min-height:10rpx;
   font-size: 25rpx;
   font-weight: 150;
   color: #888888;
   align-items: left;
-  margin-left: 60rpx;
-  margin-top: 20rpx;
+  margin-left: 30rpx;
+  margin-top: 40rpx;  
+  line-height: 1.6;
 }

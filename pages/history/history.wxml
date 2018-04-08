@@ -10,8 +10,7 @@
         </view>
         <view class = "driverInfo">
           <image class="avatar" src="avatar.jpg"></image>
-           <text class="carModel">{{item.car}}</text>
-           <text class= "carModel">{{item.driver}}</text>
+           <text class="carModel">{{item.driver}}\n{{item.car}} </text>
         </view>
       </view>
     </button>
@@ -27,8 +26,7 @@
         </view>
         <view class = "driverInfo">
           <image class="avatar" src="avatar.jpg"></image>
-           <text class="carModel">{{item.car}}</text>
-           <text class= "carModel">{{item.driver}}</text>
+           <text class="carModel">{{item.driver}}\n{{item.car}} </text>
         </view>
       </view>
     </button>
