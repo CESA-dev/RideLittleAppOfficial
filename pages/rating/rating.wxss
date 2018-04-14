@@ -1,0 +1,25 @@
+page{
+  background-color: white;
+}
+.score{
+  background-color: lightgray;
+  height: 230rpx;
+  align-self: center;
+  width: 90%;
+  margin-left: 5%;
+}
+.score_text{
+  font-size: 25rpx;
+  margin-left: 30rpx;
+}
+.score_star{
+  font-size: 40rpx;
+  margin-top: 30rpx;
+  text-align: center;
+}
+.star_hollow{
+  color: black;
+}
+.star_solid{
+  color: black;
+}
