@@ -17,6 +17,12 @@ Page({
       { route: '普渡-香槟', driver: '老司机', date: '12/18/2017', time: '1 AM', car: 'BMW X5', status: '已完成' },
     ],
   },
+  /**
+   * get "userid"     route:string, driver: string, date: ,time :, car: , status:histry 
+   * 
+   * get one histry relation 
+   * one current route relation
+   */
 
   /**
    * 生命周期函数--监听页面加载
@@ -39,6 +45,19 @@ Page({
         }
       })
     }
+    console.log(this.data.userInfo)
+  },
+
+  toDetailView: function (e) {
+    console.log(e)
+    let title = e.currentTarget.dataset.title
+    let date = e.currentTarget.dataset.date
+    let time = e.currentTarget.dataset.time
+    let car = e.currentTarget.dataset.car
+    wx.navigateTo({
+      url: '../detail/detail?title=' + title + "&date="
+      + date + "&time=" + time + "&car=" + car
+    })
   },
 
   /**
