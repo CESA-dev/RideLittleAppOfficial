@@ -1,9 +1,29 @@
-<view class="score">
-  <text class="score_text">请你为本次顺风车打分:</text>
-  <view class="score_star" bindtap="myStarChoose">
-    <block wx:for="{{starMap}}">
-      <text wx:if="{{star>=index+1}}" style="padding-right: .5em" class="star_solid" data-star="{{index+1}}">★</text>
-      <text wx:if="{{star<index+1}}" style="padding-right: .5em" class="star_hollow" data-star="{{index+1}}">☆</text>
-    </block>
+
+<view class="rating_whole">
+  <view class="ride_description">
+    <view class="ride_description_text">
+      <text class="ride_finish">您已完成本次顺风车</text>
+      <text class="ride_time">历时{{rideTime.hours}}小时{{rideTime.minutes}}分钟
+      </text>
+    </view>
+  </view>
+
+  <view class="ride_driver">
+    <image class="driverInfo-avatar" src="{{driverInfo.avatarUrl}}"
+      background-size="cover"></image>
+    <text class="driverInfo-name">{{driverInfo.nickName}}
+    </text>
+  </view>
+
+  <view class="score">
+    <text class="score_text">请你为本次顺风车打分:</text>
+    <view class="score_star" bindtap="myStarChoose">
+      <block wx:for="{{starMap}}">
+        <text wx:if="{{star>=index+1}}" style="padding-right: .5em" 
+        class="star_solid" data-star="{{index+1}}">★</text>
+        <text wx:if="{{star<index+1}}" style="padding-right: .5em" 
+        class="star_hollow" data-star="{{index+1}}">☆</text>
+      </block>
+    </view>
   </view>
 </view>
