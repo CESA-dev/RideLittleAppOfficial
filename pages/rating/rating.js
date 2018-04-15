@@ -23,6 +23,11 @@ Page({
     this.setData({
       star: star,
     });
+  },
+  onUnload() {
+    wx.redirectTo({
+      url: '../launch/launch'
+    })
   }
 });
 
