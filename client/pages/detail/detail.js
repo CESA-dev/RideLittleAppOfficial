@@ -6,13 +6,20 @@ Page({
       date: options.date,
       time: options.time,
       car: options.car,
+      
+      driver_name:options.driver_name,
+      driver_avator: options.driver_avator,
+      isDriver: options.isDriver,
       textArray: [{ name: '', img: '', add: "/images/addSeat.png" }, { name: '', img: '', add: "/images/addSeat.png" }, { name: '', img: '', add: "/images/addSeat.png" }, { name: '', img: '', add: "/images/addSeat.png"}]
     });
+
   },
 
 
   selectSeat: function(e) {
-    
+    if(this.data.isDriver === "true"){
+      return;
+    }
     var idx = parseInt(e.currentTarget.id);
     console.log(idx);
     let passengers = this.data.textArray;

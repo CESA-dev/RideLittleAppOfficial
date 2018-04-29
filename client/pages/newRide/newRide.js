@@ -1,3 +1,4 @@
+const app = getApp()
 Page({
 
   /**
@@ -12,6 +13,7 @@ Page({
     selectDate:"",
     selectTime:"",
     selectSeatNumber:0,
+    
   },
 
 
@@ -155,14 +157,17 @@ Page({
   
 
   create:function(e){
-    console.log('创建房间' + this.data.selectSeatNumber + this.data.selectDate + this.data.selectTime);
+    console.log('创建房间' + this.data.selectSeatNumber + this.data.selectDate + this.data.selectTime + this.data.driver);
     let title = e.currentTarget.dataset.title
     let date = e.currentTarget.dataset.date
     let time = e.currentTarget.dataset.time
     let car = e.currentTarget.dataset.car
+    let driver_name = app.globalData.userInfo.nickName
+    let driver_avator = app.globalData.userInfo.avatarUrl
+    let isDriver = "true"
     wx.navigateTo({
       url: '../detail/detail?title=' + title + "&date="
-      + date + "&time=" + time + "&car=" + car
+      + date + "&time=" + time + "&car=" + car + "&driver_name=" + driver_name + "&driver_avator=" + driver_avator + "&isDriver=" + isDriver
     })
     
   }
