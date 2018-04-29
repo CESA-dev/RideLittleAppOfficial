@@ -13,81 +13,93 @@
 }
 
 .itemContent {
-  align-items: left;
+  /*align-items: center;*/
   display: flex;
   flex-direction: column;
   height: auto;
 }
 
 .routeInfo{
+  width: 90%;
+  margin-left: 5%;
+  /*align-self: center;*/
   display:flex;
   flex-direction: row;
   margin-top: 10rpx;
-  border-bottom:1px solid grey;
-  padding: 30rpx;
-  padding-bottom: 40rpx;
+  border-bottom:1px solid lightgrey;
+  padding: 10rpx;
+  padding-bottom: 10rpx;
+}
+.routeList {
+  width: 400rpx;
+  display: flex;
+  flex-direction: column;
 }
 .listText {
-  margin-left: 35rpx;
+  align-self: left;
+  height: 45rpx;
   margin-top: 1rpx;
-  font-size: 30rpx;
+  font-size: 37rpx;
   font-weight: 250;
   color: #5b5b5b;
 }
 
 .listTime{
-  height:30rpx;
-  font-size: 25rpx;
+  align-self: left;
+  /*height:30rpx;*/
+  font-size: 28rpx;
   font-weight: 150;
   color: #888888;
   align-items: left;
-  margin-left: 36rpx;
-  margin-top: 50rpx;
-  position: absolute;
+  margin-top: 15rpx;
+  /*margin-top: 70rpx;
+  position: absolute;*/
 }
 .statusCurrent{
-  width:100rpx;
-  height:60rpx;
-  margin-left: 300rpx;
-  margin-top: 10rpx;
+  width: 120rpx;
+  height: 50rpx;
+  position: absolute;
+  margin-left: 460rpx;
+  margin-top: 20rpx;
   background-color:#B3EA7B;
-  font-size: 23rpx;
+  font-size: 20rpx;
   border-radius: 3px;
 }
 
 .statusPast{
-  width:100rpx;
-  height:60rpx;
-  margin-left: 300rpx;
+  width: 120rpx;
+  height: 50rpx;
+  position: absolute;
+  margin-left: 460rpx;
   margin-top: 20rpx;
   background-color:#B36B74;
-  font-size: 23rpx;
+  font-size: 20rpx;
   border-radius: 3px;
 }
 
 .driverInfo{
   display:flex;
   flex-direction: row;
-   margin-top: 10rpx; 
-   padding-bottom: 10rpx; 
+  margin-top: 10rpx; 
+  padding-bottom: 10rpx; 
 }
 
 .avatar {
-  width:100rpx;
-  height: 100rpx;
+  width: 70rpx;
+  height: 70rpx;
   align-items: left;
   border-radius: 50%;
-  margin-top: 20rpx;
-  margin-left: 68rpx;
-  }
+  margin-top: 25rpx;
+  margin-left: 40rpx;
+}
 
 .carModel{
   min-height:10rpx;
-  font-size: 25rpx;
+  font-size: 27rpx;
   font-weight: 150;
   color: #888888;
   text-align: left;
   margin-left: 30rpx;
-  margin-top: 40rpx;  
-  line-height: 1.6;
+  margin-top: 22rpx;  
+  line-height: 1.5;
 }
