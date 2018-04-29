@@ -78,7 +78,7 @@
   align-items: left;
   border-radius: 50%;
   margin-top: 20rpx;
-  margin-left: 30rpx;
+  margin-left: 68rpx;
   }
 
 .carModel{
