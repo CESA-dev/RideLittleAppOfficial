@@ -11,16 +11,16 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>-->
-
-  <view class="user-block">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"
+  <view class="block-whole">
+    <view class="user-block">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"
       background-size="cover"></image>
-    <view class="user-info-area">
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      <text class="userinfo-score">4.9/5.0</text>
-      <text class="userinfo-record">已参与过1231次顺风车</text>
+      <view class="user-info-area">
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <text class="userinfo-score">4.9/5.0</text>
+        <text class="userinfo-record">已参与过1231次顺风车</text>
+      </view>
     </view>
-  </view>
 
   <view class="input-block" bindchange="reset">
     <view class="userinfo-details">
@@ -66,6 +66,10 @@
 
   <view class="button-block">
     <button bindtap="onClick" type="{{buttonType}}"
-     class="edit-button">{{buttonText}}</button>
+     class="edit-button">
+     <text class="button-text">{{buttonText}}</text>
+    </button>
   </view>
+  </view>
+  
 </view>
