@@ -6,8 +6,46 @@ Page({
       date: options.date,
       time: options.time,
       car: options.car,
-      textArray: [[{ name: 'username', img: 'http://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg', del_display: 'none' }, { name: '', img: '', del_display: 'none' }], [{ name: '', img: '', del_display: 'none' }, { name: '', img: '', del_display: 'none'}]]
+      
+      driver_name:options.driver_name,
+      driver_avator: options.driver_avator,
+      isDriver: options.isDriver,
+      textArray: [{ name: '', img: '', add: "/images/addSeat.png" }, { name: '', img: '', add: "/images/addSeat.png" }, { name: '', img: '', add: "/images/addSeat.png" }, { name: '', img: '', add: "/images/addSeat.png"}]
     });
+
+  },
+
+
+  selectSeat: function(e) {
+    if(this.data.isDriver === "true"){
+      return;
+    }
+    var idx = parseInt(e.currentTarget.id);
+    console.log(idx);
+    let passengers = this.data.textArray;
+    let user_name = app.globalData.userInfo ? app.globalData.userInfo.nickName : "Username";
+    console.log(app.globalData.userInfo.name);
+    let user_img = app.globalData.userInfo ? app.globalData.userInfo.avatarUrl : 'https://i.imgur.com/I8Ce8Ke.jpg';
+    if (passengers[idx].img === ''){
+        console.log('adding image');
+        
+        passengers.forEach(function(element) {
+
+          if (element.name === user_name) {
+            element.name = '';
+            element.img = '';
+            element.add = "/images/addSeat.png";
+          }
+        });
+        passengers[idx].img = user_img;
+        passengers[idx].name = user_name;
+        passengers[idx].add = "";
+    }
+    this.setData({
+      textArray: passengers
+    });
+
+
   },
 
   toIndexView: function() {
@@ -20,47 +58,19 @@ Page({
     let id = e.currentTarget.id;
     console.log(id);
     let passengers = this.data.textArray;
-    console.log(passengers[parseInt(id[3])][parseInt(id[4])]);
-    if (passengers[parseInt(id[3])][parseInt(id[4])].img === '') {
+    console.log(passengers[parseInt(id[3])]);
+    if (passengers[parseInt(id[3])].img === '') {
       console.log('errrrorrrrr');
     }
     else {
-      passengers[parseInt(id[3])][parseInt(id[4])].img = '';
-      passengers[parseInt(id[3])][parseInt(id[4])].del_display='none';
+      passengers[parseInt(id[3])].img = '';
+      passengers[parseInt(id[3])].del_display='none';
     }
     this.setData({
       textArray: passengers
     });
   },
-  addSeat: function(e) {
-    console.log(e);
-    let id = e.currentTarget.id;
-    let passengers = this.data.textArray;
-    let user_name = app.globalData.userInfo ? app.globalData.userInfo.name : "anonymous";
-    let user_img = app.globalData.userInfo ? app.globalData.userInfo.avatarUrl : 'https://i.imgur.com/I8Ce8Ke.jpg';
-
-    // if the seat clicked is empty
-    if (passengers[parseInt(id[0])][parseInt(id[1])].img === '') {
-      console.log('adding image');
-      // parse the passenger to remove the old seat cur user selected
-      passengers.forEach((row_val, row_idx, arr_whole) => {
-        row_val.forEach((col_val, col_idx, arr_row) => {
-          if (col_val.name === user_name) {
-            arr_row[col_idx].name = '';
-            arr_row[col_idx].img = '';
-            arr_row[col_idx].del_display = 'none';
-          }
-        })
-      });
-      // add user info
-      passengers[parseInt(id[0])][parseInt(id[1])].img = user_img;
-      passengers[parseInt(id[0])][parseInt(id[1])].name = user_name;
-      passengers[parseInt(id[0])][parseInt(id[1])].del_display='true';
-    }
-    this.setData({
-      textArray: passengers
-    });
-  },
+  
   endRideAction: function(e){
     wx.navigateTo({
       url: '../rating/rating'

@@ -1,3 +1,4 @@
+const app = getApp()
 Page({
 
   /**
@@ -5,11 +6,14 @@ Page({
    */
   data: {
     start: [{ name: 'ORD', selected: false }, { name: '芝加哥市区', selected: false }, { name: '香槟', selected: false }, { name: '其他', selected: false }],
+    otherStart: 'nk',
+    otherDest: 'j',
     destination: [{ name: 'ORD', selected: false }, { name: '芝加哥市区', selected: false }, { name: '香槟', selected: false }, { name: '其他', selected: false }],
     numberOfSeat: [1,2,3,4,5],
     selectDate:"",
     selectTime:"",
     selectSeatNumber:0,
+    
   },
 
 
@@ -95,6 +99,24 @@ Page({
     })
   },
 
+  bindOtherStart: function (e) {
+    console.log('设置特殊出发地：' + e.detail.value)
+    this.setData(
+      {
+        otherStart: e.detail.value
+      }
+    )
+  },
+
+  bindOtherDest: function (e) {
+    console.log('设置特殊起始地：' + e.detail.value)
+    this.setData(
+      {
+        otherDest: e.detail.value
+      }
+    )
+  },
+
   addLoc: function (e) {
     console.log(e);
     let id = e.currentTarget.id;
@@ -135,14 +157,17 @@ Page({
   
 
   create:function(e){
-    console.log('创建房间' + this.data.selectSeatNumber + this.data.selectDate + this.data.selectTime);
+    console.log('创建房间' + this.data.selectSeatNumber + this.data.selectDate + this.data.selectTime + this.data.driver);
     let title = e.currentTarget.dataset.title
     let date = e.currentTarget.dataset.date
     let time = e.currentTarget.dataset.time
     let car = e.currentTarget.dataset.car
+    let driver_name = app.globalData.userInfo.nickName
+    let driver_avator = app.globalData.userInfo.avatarUrl
+    let isDriver = "true"
     wx.navigateTo({
       url: '../detail/detail?title=' + title + "&date="
-      + date + "&time=" + time + "&car=" + car
+      + date + "&time=" + time + "&car=" + car + "&driver_name=" + driver_name + "&driver_avator=" + driver_avator + "&isDriver=" + isDriver
     })
     
   }

@@ -12,6 +12,9 @@
         </view>
       </block>
     </view>
+     <view class='otherinput' wx:if="{{start[3].selected}}">
+       <input placeholder-class="phcolor" placeholder="请输入出发地" auto-focus type='text' bindinput='bindOtherStart'/>
+    </view>
   </view>
 
   <view class="sub_block">
@@ -26,6 +29,9 @@
         </view>
       </block>
     </view>
+    <view class='otherinput' wx:if="{{destination[3].selected}}" >
+             <input placeholder-class="phcolor" placeholder="请输入目的地" bindinput='bindOtherDest' auto-focus/>
+      </view>
   </view>
 
   <view class='sub_block'>

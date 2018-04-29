@@ -17,12 +17,23 @@ page{
   color: #849EEB;
   background-color: white;
 }
-.loc_block {
+/* .loc_block {
   display: flex;
   flex-direction: column;
   color: white;
   margin: 10px;
+} */
+
+.phcolor{
+ color:white
 }
+.otherinput{
+  padding: 3px 5px;
+  border:white solid 1px;
+  margin: 5%;
+  color: white;
+}
+
 .loc_option_block {
   display: flex;
   flex-direction: row;

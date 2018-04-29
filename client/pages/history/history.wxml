@@ -4,13 +4,15 @@
     <button class="listItem" bindtap="toDetailView" data-title="{{item.route}}" data-date="{{item.date}}" data-time="{{item.time}}" data-car="{{item.car}}">
       <view class="itemContent">
         <view class="routeInfo">
-          <text class="listText">{{item.route}}</text>
-          <text class="listTime">{{item.date}} {{item.time}}</text>
-           <text class="statusCurrent">{{item.status}}</text>
+          <view class="routeList">
+            <text class="listText">{{item.route}}</text>
+            <text class="listTime">{{item.date}} {{item.time}}</text>
+          </view>
+          <text class="statusCurrent">{{item.status}}</text>
         </view>
         <view class = "driverInfo">
           <image class="avatar" src="avatar.jpg"></image>
-           <text class="carModel">{{item.driver}}\n{{item.car}} </text>
+          <text class="carModel">{{item.driver}}\n{{item.car}} </text>
         </view>
       </view>
     </button>
@@ -20,9 +22,11 @@
     <button class="listItem" bindtap="toDetailView" data-title="{{item.route}}" data-date="{{item.date}}" data-time="{{item.time}}" data-car="{{item.car}}">
       <view class="itemContent">
         <view class="routeInfo">
-          <text class="listText">{{item.route}}</text>
-          <text class="listTime">{{item.date}} {{item.time}}</text>
-           <text class="statusPast">已完成</text>
+          <view class="routeList">
+            <text class="listText">{{item.route}}</text>
+            <text class="listTime">{{item.date}} {{item.time}}</text>
+          </view>
+          <text class="statusPast">已完成</text>
         </view>
         <view class = "driverInfo">
           <image class="avatar" src="avatar.jpg"></image>
