@@ -140,7 +140,7 @@
 
 .driver-area{
   width: 90%;
-  height: 280rpx;
+  height: 180rpx;
   margin-top: 50rpx;
   margin-left: 5%;
   background-color: #FCFCFC;
@@ -170,7 +170,7 @@
   height: 110rpx;
   align-items: left;
   border-radius: 50%;
-  margin-top: 48rpx;
+  margin-top: 33rpx;
   margin-left:50rpx;
   display: flex;
   flex-direction: row;
@@ -192,7 +192,7 @@
 .listInfo{
   display:flex;
   flex-direction: column;
-  margin-top: 60rpx;
+  margin-top: 45rpx;
   margin-left: 35rpx;
 }
 
@@ -214,6 +214,7 @@
 
 .cartype{
   margin-top: 10rpx;
+  margin-left: 5rpx;
   font-size: 20rpx;
   color: #9B9B9B;
   font-weight: 6rpx;
