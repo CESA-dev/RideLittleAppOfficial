@@ -6,7 +6,7 @@ Page({
       date: options.date,
       time: options.time,
       car: options.car,
-      textArray: [{ name: '', img: '', add_display: false }, { name: '', img: '', add_display: false }, { name: '', img: '', add_display: false }, { name: '', img: '', add_display: false}]
+      textArray: [{ name: '', img: '', add: "/images/addSeat.png" }, { name: '', img: '', add: "/images/addSeat.png" }, { name: '', img: '', add: "/images/addSeat.png" }, { name: '', img: '', add: "/images/addSeat.png"}]
     });
   },
 
@@ -16,7 +16,7 @@ Page({
     var idx = parseInt(e.currentTarget.id);
     console.log(idx);
     let passengers = this.data.textArray;
-    let user_name = app.globalData.userInfo.nickName;
+    let user_name = app.globalData.userInfo ? app.globalData.userInfo.nickName : "Username";
     console.log(app.globalData.userInfo.name);
     let user_img = app.globalData.userInfo ? app.globalData.userInfo.avatarUrl : 'https://i.imgur.com/I8Ce8Ke.jpg';
     if (passengers[idx].img === ''){
@@ -27,11 +27,12 @@ Page({
           if (element.name === user_name) {
             element.name = '';
             element.img = '';
-          
+            element.add = "/images/addSeat.png";
           }
         });
         passengers[idx].img = user_img;
         passengers[idx].name = user_name;
+        passengers[idx].add = "";
     }
     this.setData({
       textArray: passengers

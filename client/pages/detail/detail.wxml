@@ -8,14 +8,16 @@
 
 <view class='driver-area'>
   <view class="itemContent">
-    <image class="avatar"></image>
+    <image class="avatar" bindtap="toDriverView"></image>
     <view class="listInfo">
       <text class="username">username</text>
       <text class="cartype">BMW X5</text>
     </view>
     
   </view>
-  <text class='comment'>我车速巨快，一个小时能到芝加哥，不怕就来</text>
+  <view class='comment-area'>
+    <text class='comment'>我车速巨快，一个小时能到芝加哥，不怕就来</text>
+  </view>
 </view>
 <!--<view class="rider-info-view">
   <image class="avatar" src="http://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg" bindtap="toDriverView"></image>
@@ -40,13 +42,14 @@
   </view>
 </view>-->
 
-<view wx:for="{{textArray}}" wx:key="index" data-name="{{item.name}}" data-img="{{item.img}}">
+<view wx:for="{{textArray}}" wx:key="index" data-name="{{item.name}}" data-img="{{item.img}}" data-add="{{item.add}}">
   <view class='passenger-area' id='{{index}}' bindtap='selectSeat'>
     <view class="itemContent">
       <image class="passenger-avatar" src="{{item.img}}"></image>
       <view class="passenger-listInfo">
         <text class="username">{{item.name}}</text>
       </view>
+      <image class="add-img" src="{{item.add}}"></image>
     </view>
   </view>
 </view>
