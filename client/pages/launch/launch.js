@@ -13,6 +13,7 @@ Page({
                   { "role": "进行中/已完成", "icon": "/images/history.png", "tap": "historyTap" }, { "role": "个人信息", "icon": "/images/me.png", "tap": "profileTap"}]
   },
 
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -97,20 +98,19 @@ Page({
 })
 
 
-/*HTTP GET REQUEST
-/*
-wx.request({
-      url: 'https://cecywoii.qcloud.la/weapp/hello',
-      data:e,
-      header: {
-        // "Content-Type":"application/json"
-      },
-      success: function (res) {
-        console.log(res.data.data)
-      },
-      fail: function (err) {
-        console.log(err)
-      }
+//HTTP GET REQUEST
 
-    })
-*/
+// wx.request({
+//       url: 'https://cecywoii.qcloud.la/weapp/hello',
+//       data:'',
+//       header: {
+//         // "Content-Type":"application/json"
+//       },
+//       success: function (res) {
+//         console.log(res.data.data)
+//       },
+//       fail: function (err) {
+//         console.log(err)
+//       }
+
+//     })
