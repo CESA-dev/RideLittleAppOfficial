@@ -28,7 +28,7 @@
         <text class="userinfo-email-title">学校邮箱</text>
       </view>
       <input class="input" id="emailInput" value="{{email}}"
-       disabled='{{edit}}' placeholder="netid@illinois.edu"></input>
+       disabled='false' placeholder="netid@illinois.edu"></input>
     </view>
 
     <view class="userinfo-details">
@@ -36,7 +36,7 @@
         <text class="userinfo-major-title">在读专业</text>
       </view>
       <input class="input" id="majorInput" value="{{major}}"
-       disabled='{{edit}}' placeholder="Math"></input>
+       disabled='false' placeholder="Math"></input>
     </view>
     
     <view class="userinfo-details">
@@ -44,7 +44,7 @@
         <text class="userinfo-year-title">所在年级</text>
       </view>
       <input class="input" id="yearInput" value="{{year}}"
-       disabled='{{edit}}' placeholder="大二"></input>
+       disabled='false' placeholder="大二"></input>
     </view>
 
     <view class="userinfo-details">
@@ -52,7 +52,7 @@
         <text class="userinfo-music-title">喜欢的音乐</text>
       </view>
       <input class="input" id="musicInput" value="{{music}}"
-       disabled='{{edit}}' placeholder="轻音乐"></input>
+       disabled='false' placeholder="轻音乐"></input>
     </view>
 
     <view class="userinfo-details-sports">
@@ -60,12 +60,7 @@
         <text class="userinfo-sports-title">喜欢的体育运动</text>
       </view>
       <input class="input" id="sportsInput" value="{{sports}}"
-       disabled='{{edit}}' placeholder="篮球"></input>
+       disabled='false' placeholder="篮球"></input>
     </view>
-  </view>
-
-  <view class="button-block">
-    <button bindtap="onClick" type="{{buttonType}}"
-     class="edit-button">{{buttonText}}</button>
   </view>
 </view>
