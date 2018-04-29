@@ -48,6 +48,16 @@ page{
 
 }
 
+.phcolor{
+ color:white
+}
+.otherinput{
+  padding: 3px 5px;
+  border:white solid 1px;
+  margin: 5%;
+  color: white;
+}
+
 .date{
   width:94%;
   height: 70rpx;

@@ -5,6 +5,8 @@ Page({
    */
   data: {
     start: [{ name: 'ORD', selected: false }, { name: '芝加哥市区', selected: false }, { name: '香槟', selected: false }, { name: '其他', selected: false }],
+    otherStart: 'nk',
+    otherDest: 'j',
     destination: [{ name: 'ORD', selected: false }, { name: '芝加哥市区', selected: false }, { name: '香槟', selected: false }, { name: '其他', selected: false }],
     numberOfSeat: [1,2,3,4,5],
     selectDate:"",
@@ -93,6 +95,24 @@ Page({
       index: e.detail.value,
       selectSeatNumber: e.detail.value
     })
+  },
+
+  bindOtherStart: function (e) {
+    console.log('设置特殊出发地：' + e.detail.value)
+    this.setData(
+      {
+        otherStart: e.detail.value
+      }
+    )
+  },
+
+  bindOtherDest: function (e) {
+    console.log('设置特殊起始地：' + e.detail.value)
+    this.setData(
+      {
+        otherDest: e.detail.value
+      }
+    )
   },
 
   addLoc: function (e) {
