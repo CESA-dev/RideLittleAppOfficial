@@ -254,7 +254,7 @@
 /*version 1.0*/
 .barcode-area{
   width: 90%;
-  height: 1000rpx;
+  height: 800rpx;
   margin-top: 50rpx;
   margin-bottom: 40rpx;
   margin-left: 5%;
