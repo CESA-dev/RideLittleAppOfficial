@@ -64,7 +64,7 @@
   height: 180rpx;
   margin: 40rpx;
   color: grey; 
-   text-align: center; 
+  text-align: center; 
   border-width: 2rpx;
   border-color: grey;
   border-style: solid;
@@ -126,17 +126,32 @@
 
 
 .end-ride{
-  width: 70%;
-  height:80rpx;
-
+  width: 90%;
+  height: 100rpx;
+  margin-top: 50rpx;
+  margin-bottom: 40rpx;
+  margin-left: 5%;
+  background-color: #FCFCFC;
+  border-radius: 7rpx;
+  
 }
 
 
 
 .driver-area{
   width: 90%;
-  height: 300rpx;
+  height: 280rpx;
   margin-top: 50rpx;
+  margin-left: 5%;
+  background-color: #FCFCFC;
+  border-radius: 7rpx;
+  box-shadow: 0rpx 1rpx 4rpx 1rpx #DCDCDC;
+}
+
+.passenger-area{
+  width: 90%;
+  height: 130rpx;
+  margin-top: 40rpx;
   margin-left: 5%;
   background-color: #FCFCFC;
   border-radius: 7rpx;
@@ -162,10 +177,29 @@
   
 }
 
+.passenger-avatar{
+  background-color: gray;
+  width:80rpx;
+  height: 80rpx;
+  align-items: left;
+  border-radius: 50%;
+  margin-top: 25rpx;
+  margin-left:50rpx;
+  display: flex;
+  flex-direction: row;
+}
+
 .listInfo{
   display:flex;
   flex-direction: column;
   margin-top: 60rpx;
+  margin-left: 35rpx;
+}
+
+.passenger-listInfo{
+  display:flex;
+  flex-direction: column;
+  margin-top: 40rpx;
   margin-left: 35rpx;
 }
 
@@ -176,6 +210,8 @@
 
 }
 
+
+
 .cartype{
   margin-top: 10rpx;
   font-size: 20rpx;
@@ -185,8 +221,13 @@
 
 .comment {
   margin-left: 50rpx;
-  margin-top: 20rpx;
   align-content: center;
   font-size: 25rpx;
   color:gray;
+}
+
+.end-text{
+  font-size: 30rpx;
+  color: #4A4A4A;
+  font-weight: 3rpx;
 }
