@@ -5,7 +5,9 @@ Page({
    */
   data: {
     start: [{name: 'ORD', selected: false }, {name: '芝加哥市区', selected: false }, {name: '香槟', selected: false }, {name: '其他', selected: false }],
-    destination: [{ name: 'ORD', selected: false }, { name: '芝加哥市区', selected: false }, { name: '香槟', selected: false }, { name: '其他', selected: false }]
+    otherStart: 'nk',
+    otherDest : 'j',
+    destination: [{ name: 'ORD', selected: false }, { name: '芝加哥市区', selected: false }, { name: '香槟', selected: false }, { name: '其他', selected: false }],
   },
    
 
@@ -80,6 +82,24 @@ Page({
     })
   },
 
+  bindOtherStart: function(e){
+    console.log('设置特殊出发地：'+e.detail.value)
+    this.setData(
+      {
+        otherStart: e.detail.value
+      }
+    )
+  },
+
+  bindOtherDest: function(e){
+    console.log('设置特殊起始地：' + e.detail.value)
+    this.setData(
+      {
+        otherDest: e.detail.value
+      }
+    )
+  },
+
   addLoc: function (e) {
     console.log(e);
     let id = e.currentTarget.id;
@@ -118,6 +138,31 @@ Page({
   },
 
   search: function(e){
+    let result = {};
+    result.date = this.data.date;
+    result.time = this.data.time;
+    
+
+    let locs = []; 
+    locs = this.data.start;
+    for (var i = 0; i < locs.length-1; i++){
+      if(locs[i].selected == true){
+        result.start = locs[i].name;
+      }
+    }
+    if(locs[3].selected == true){
+      result.start = this.data.otherStart;
+    }
+    locs = this.data.destination;
+    for (var i = 0; i < locs.length - 1; i++) {
+      if (locs[i].selected == true) {
+        result.dest = locs[i].name;
+      }
+    }
+    if (locs[3].selected == true) {
+      result.dest = this.data.otherDest;
+    }
+    console.log(result)
     wx.navigateTo({
       url: '../index/index',
     })
