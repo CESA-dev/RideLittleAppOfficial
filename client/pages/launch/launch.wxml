@@ -7,8 +7,8 @@
       <button class="passenger-button" bindtap="{{item.tap}}" data-title="{{item.role}}">
         
       </button>
-      <image class="icon" src="{{item.icon}}"></image>
-      <text class="role-text">{{item.role}}</text>
+      <image class="icon" bindtap="{{item.tap}}" src="{{item.icon}}"></image>
+      <text class="role-text" bindtap="{{item.tap}}">{{item.role}}</text>
     </view>
   </view>
   
