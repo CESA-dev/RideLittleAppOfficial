@@ -31,7 +31,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
@@ -74,6 +74,8 @@ Page({
     wx.navigateTo({
       url: '../search/search',
     })
+
+    
   },
 
   driverTap: function(e){
@@ -88,3 +90,22 @@ Page({
     })
   }
 })
+
+
+/*HTTP GET REQUEST
+/*
+wx.request({
+      url: 'https://cecywoii.qcloud.la/weapp/hello',
+      data:e,
+      header: {
+        // "Content-Type":"application/json"
+      },
+      success: function (res) {
+        console.log(res.data.data)
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+
+    })
+*/

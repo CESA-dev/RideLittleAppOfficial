@@ -5,7 +5,7 @@
   <text class="time">{{time}}</text>
 </view>
 
-<view class="rider-info-view">
+<!--<view class="rider-info-view">
   <image class="avatar" src="http://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg" bindtap="toDriverView"></image>
   <view class="rider-info-area">
     <text id="ridername">username</text>
@@ -23,7 +23,23 @@
       <text class='plus-sign'>+</text>
     </view>
   </view>
+</view>-->
+<view class='driver-area'>
+  <view class="itemContent">
+    <image class="avatar"></image>
+    <view class="listInfo">
+      <text class="username">username</text>
+      <text class="cartype">BMW X5</text>
+    </view>
+    
+  </view>
+  <text class='comment'>我车速巨快，一个小时能到芝加哥，不怕就来</text>
 </view>
+
+
+
+
+
 <view class='comment-area'>
   <text class='comment'>司机备注：</text>
   <text class='comment'>我车速巨快，一个小时能到芝加哥，不怕就来</text>
