@@ -8,9 +8,9 @@
 
 <view class='driver-area'>
   <view class="itemContent">
-    <image class="avatar" bindtap="toDriverView"></image>
+    <image class="avatar" bindtap="toDriverView" src="{{driver_avator}}"></image>
     <view class="listInfo">
-      <text class="username">username</text>
+      <text class="username">{{driver_name}}</text>
       <text class="cartype">BMW X5</text>
     </view>
     
