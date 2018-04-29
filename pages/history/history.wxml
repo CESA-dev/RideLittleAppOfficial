@@ -1,7 +1,7 @@
 <!--pages/history/history.wxml-->
 <view class = "container">
 <view wx:for="{{textArray}}" wx:key="index">
-    <button class="listItem" data-title="{{item.route}}" data-date="{{item.date}}" data-time="{{item.time}}" data-car="{{item.car}}">
+    <button class="listItem" bindtap="toDetailView" data-title="{{item.route}}" data-date="{{item.date}}" data-time="{{item.time}}" data-car="{{item.car}}">
       <view class="itemContent">
         <view class="routeInfo">
           <text class="listText">{{item.route}}</text>
@@ -17,7 +17,7 @@
   </view>
 
   <view wx:for="{{histryArray}}" wx:key="index">
-    <button class="listItem" data-title="{{item.route}}" data-date="{{item.date}}" data-time="{{item.time}}" data-car="{{item.car}}">
+    <button class="listItem" bindtap="toDetailView" data-title="{{item.route}}" data-date="{{item.date}}" data-time="{{item.time}}" data-car="{{item.car}}">
       <view class="itemContent">
         <view class="routeInfo">
           <text class="listText">{{item.route}}</text>
