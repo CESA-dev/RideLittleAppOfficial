@@ -1,9 +1,9 @@
 
-<view class="container ride-info-view" id="header">
+<!--<view class="container ride-info-view" id="header">
   <text class="route">{{title}}</text>
   <text class="time">{{date}}</text>
   <text class="time">{{time}}</text>
-</view>
+</view>-->
 
 
 <view class='driver-area'>
@@ -15,9 +15,9 @@
     </view>
     
   </view>
-  <view class='comment-area'>
+  <!--<view class='comment-area'>
     <text class='comment'>我车速巨快，一个小时能到芝加哥，不怕就来</text>
-  </view>
+  </view>-->
 </view>
 <!--<view class="rider-info-view">
   <image class="avatar" src="http://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg" bindtap="toDriverView"></image>
@@ -42,7 +42,7 @@
   </view>
 </view>-->
 
-<view wx:for="{{textArray}}" wx:key="index" data-name="{{item.name}}" data-img="{{item.img}}" data-add="{{item.add}}">
+<!--<view wx:for="{{textArray}}" wx:key="index" data-name="{{item.name}}" data-img="{{item.img}}" data-add="{{item.add}}">
   <view class='passenger-area' id='{{index}}' bindtap='selectSeat'>
     <view class="itemContent">
       <image class="passenger-avatar" src="{{item.img}}"></image>
@@ -52,7 +52,13 @@
       <image class="add-img" src="{{item.add}}"></image>
     </view>
   </view>
+</view>-->
+
+<view class='barcode-area'>
+  <image class='barcode-img' bindtap="longTap" src='{{scene}}'></image>
+
 </view>
+
 
 
 

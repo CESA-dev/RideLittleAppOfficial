@@ -83,6 +83,13 @@ Page({
     wx.navigateTo({
       url: '../driver/driver'
     })
+  },
+
+
+  longTap: function(e) {
+    wx.previewImage({
+      url: '/images/barcodeSample.jpeg' 
+    })
   }
 
   

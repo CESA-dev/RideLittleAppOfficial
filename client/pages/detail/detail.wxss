@@ -247,3 +247,24 @@
 .comment-area{
   margin-top: 30rpx;
 }
+
+
+
+/*version 1.0*/
+.barcode-area{
+  width: 90%;
+  height: 1000rpx;
+  margin-top: 50rpx;
+  margin-bottom: 40rpx;
+  margin-left: 5%;
+  background-color: #FCFCFC;
+  border-radius: 7rpx;
+  box-shadow: 0rpx 1rpx 4rpx 1rpx #DCDCDC;
+}
+
+.barcode-img{
+  width: 90%;
+  margin-top:5%;
+  margin-left:5%;
+  height: 90%;
+}
