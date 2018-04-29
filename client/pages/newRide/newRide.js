@@ -9,9 +9,13 @@ Page({
     otherStart: 'nk',
     otherDest: 'j',
     destination: [{ name: 'ORD', selected: false }, { name: '芝加哥市区', selected: false }, { name: '香槟', selected: false }, { name: '其他', selected: false }],
+    contact:[{name:'微信号',selected:false},{name:'微信二维码', selected:false}],
+    contactID:'',
+    QRcode:'',
+    QRcodeprovided:false,
     numberOfSeat: [1,2,3,4,5],
-    selectDate:"",
-    selectTime:"",
+    selectDate:'',
+    selectTime:'',
     selectSeatNumber:0,
     
   },
@@ -116,6 +120,66 @@ Page({
       }
     )
   },
+
+  bindWeChatId: function(e){
+    console.log('设置联络方式：' + e.detail.value)
+    this.setData(
+      {
+        contactID: e.detail.value
+      }
+    )
+  },
+
+  addContact: function (e){
+    console.log(e);
+    let id = e.currentTarget.id;
+    let index = id[id.length - 1];
+    let options = this.data.contact;
+    options[0].selected = false;
+    options[1].selected = false;
+    options[index].selected = true;
+    this.setData({
+      contact:options
+    })
+    if(index == 1){
+      let _this = this
+      wx.showActionSheet({
+        itemList: ['从相册中选择', '拍照'],
+        itemColor: "blue",
+        success: function (res) {
+          if (!res.cancel) {
+            if (res.tapIndex == 0) {
+              _this.chooseWxImage('album')
+            } else if (res.tapIndex == 1) {
+              _this.chooseWxImage('camera')
+            }
+          }
+        }
+      })
+    }
+  },
+
+  chooseWxImage: function (type) {
+    let _this = this;
+    wx.chooseImage({
+      sizeType: ['original', 'compressed'],
+      sourceType: [type],
+      success: function (res) {
+        console.log(res);
+        wx.showToast({
+          title: '成功',
+          icon: 'succes',
+          duration: 1000,
+          mask: false
+        })
+        _this.setData({
+          QRcode: res.tempFilePaths[0],
+          QRcodeprovided:true
+        })
+      }
+    })
+  },
+
 
   addLoc: function (e) {
     console.log(e);
