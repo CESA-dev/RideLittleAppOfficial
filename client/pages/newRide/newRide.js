@@ -222,16 +222,24 @@ Page({
 
   create:function(e){
     console.log('创建房间' + this.data.selectSeatNumber + this.data.selectDate + this.data.selectTime + this.data.driver);
-    let title = e.currentTarget.dataset.title
-    let date = e.currentTarget.dataset.date
-    let time = e.currentTarget.dataset.time
-    let car = e.currentTarget.dataset.car
+    wx.setStorageSync('noNewRide', false);
+    //let title = e.currentTarget.dataset.title
+    //let date = e.currentTarget.dataset.date
+    //let time = e.currentTarget.dataset.time
+    //let car = e.currentTarget.dataset.car
+    wx.setStorageSync('title', e.currentTarget.dataset.title);
+    wx.setStorageSync('date', e.currentTarget.dataset.date);
+    wx.setStorageSync('time', e.currentTarget.dataset.time);
+    wx.setStorageSync('car', e.currentTarget.dataset.car);
     let driver_name = app.globalData.userInfo.nickName
     let driver_avator = app.globalData.userInfo.avatarUrl
     let isDriver = "true"
-    wx.navigateTo({
+    /*wx.navigateTo({
       url: '../detail/detail?title=' + title + "&date="
       + date + "&time=" + time + "&car=" + car + "&driver_name=" + driver_name + "&driver_avator=" + driver_avator + "&isDriver=" + isDriver
+    })*/
+    wx.navigateTo({
+      url: '../detail/detail?driver_name=' + driver_name + "&driver_avator=" + driver_avator + "&isDriver=" + isDriver
     })
     
   }

@@ -1,4 +1,5 @@
 // pages/history/history.js
+const app = getApp()
 Page({
 
   /**
@@ -80,8 +81,31 @@ Page({
   },
 
   driverTap: function(e){
-    wx.navigateTo({
-      url: '../newRide/newRide',
+    let driver_name = app.globalData.userInfo.nickName
+    let driver_avator = app.globalData.userInfo.avatarUrl
+    let isDriver = "true"
+    wx.getStorage({
+      key: 'newRideExists',
+      success: function (res) {
+        var newRideExists = !wx.getStorageSync('noNewRide');
+        if (newRideExists) {
+          wx.navigateTo({
+            url: '../detail/detail?&driver_name=' +
+            driver_name + "&driver_avator=" + driver_avator + "&isDriver=" +
+            isDriver
+          })
+        }
+        else {
+          wx.navigateTo({
+            url: '../newRide/newRide',
+          })
+        }
+      },
+      fail: function (res) {
+        wx.navigateTo({
+          url: '../newRide/newRide',
+        })
+      }
     })
   },
 

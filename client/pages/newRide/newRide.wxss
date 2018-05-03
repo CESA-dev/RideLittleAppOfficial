@@ -137,3 +137,7 @@ page{
   color: #849EEB;
   
 }
+
+.hide{
+  display: none;
+}

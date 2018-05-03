@@ -65,6 +65,12 @@
   <text class='comment'>司机备注：</text>
   <text class='comment'>我车速巨快，一个小时能到芝加哥，不怕就来</text>
 </view>-->
+<!--<view wx:if="{{isDriver}}">-->
+  <button class="end-ride" bindtap='modifyRide' hidden="{{!isDriver}}">
+    <text class='end-text'>修改房间设置</text>
+  </button>
+<!--</view>-->
+
 <button class="end-ride" bindtap='endRideAction'>
   <text class='end-text'>退出顺风车</text>
 </button>
